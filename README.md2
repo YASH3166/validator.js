@@ -1,0 +1,8 @@
+$input_number="00324xxxxxxxx";
+// or v.gr. $input_number="04xxxxxxxx";
+$number=$input_number;
+
+$number=preg_replace("/^00/", "+", $number);
+$number=preg_replace("/^0/", "+32", $number); // see remark below
+
+echo "input: ", $input_number, ", normalized form: ", $number, "\n";
